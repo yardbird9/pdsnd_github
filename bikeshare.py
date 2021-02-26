@@ -1,13 +1,12 @@
 import time
 import pandas as pd
-import numpy as np
 import datetime as dt
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-def get_filters():
+def get_input():
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -208,7 +207,7 @@ def view_data(df):
 def main():
     """Main function"""
     while True:
-        city, month, day = get_filters()        
+        city, month, day = get_input()        
         df = load_data(city, month, day)
         time_stats(df, month, day)        
         station_stats(df)
