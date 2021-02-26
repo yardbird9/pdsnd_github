@@ -183,6 +183,10 @@ def user_stats(df):
     print('-'*40)
 
 def view_data(df):
+    """Asks user if he wants to view 5 rows of individual trip data. 
+    Returns:
+    5 rows of individual trip data
+    """
     # ask user if he wants to see 5 rows of individual trip data
     view_display = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n')
     start_loc = 0
